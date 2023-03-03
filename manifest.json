@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "ffally",
+    "version": "1.0",
+    "description": "Highlights links to ally repos.",
+    "icons": {
+        "48": "icon.ico"
+    },
+    "permissions": [
+        "storage",
+        "https://raw.githubusercontent.com/*",
+        "https://github.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "ffally.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
